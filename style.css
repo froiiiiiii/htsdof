@@ -238,6 +238,8 @@ h1{
 .iframe{
     width: 100%;
 }
+
+
 @media (max-width: 380px) {
 .imagen{
     width: 180px;
