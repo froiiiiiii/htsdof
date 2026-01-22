@@ -198,3 +198,19 @@ h1{
 #contactos-apoyo li a:hover{
     color: #833e16;
 }
+
+@media (max-width: 830px) {
+  .contenido {
+    width: 550px;
+  }
+}
+@media (max-width: 700px) {
+  .contenido {
+    width: 400px;
+  }
+}
+@media (max-width: 420px) {
+  .contenido {
+    width: 320px;
+  }
+}
