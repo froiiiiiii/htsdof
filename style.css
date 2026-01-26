@@ -403,3 +403,65 @@ p li a {
     transform: translateY(0);
   }
 }
+
+/* segunda seccion */
+
+.second{
+  padding: 20px;
+}
+
+.second > .father{
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:2em;
+
+}
+
+.second > h3,
+.second > h2{
+  text-align: center;
+}
+
+.second > .father > .child{
+  transform: scale(0.1 );
+  border-radius: 0.7em;
+  opacity: 0;
+  padding: 2em;
+  box-shadow: 9px 10px 6px 2px rgba(0, 0, 0, 0.12);
+  transition: opacity 0.4s ease, transform 0.6s ease;
+  background-color: var(--bg-primary-color);
+}
+.second > .father > .child > h3,
+.second > .father > .child > h2{
+  text-align: center;
+}
+.second > .father > .child > p{
+  text-align: justify;
+}
+
+.second > .father > .child.visible{
+  animation: entrar_second 0.8s ease forwards;
+}
+.second > .father >.child:nth-child(1){
+  animation-delay: 0.2s;
+}
+.second > .father >.child:nth-child(2){
+  animation-delay: 0.4s;
+}
+.second > .father >.child:nth-child(3){
+  animation-delay: 0.6s;
+}
+
+@keyframes entrar_second {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .second .father {
+    grid-template-columns: 1fr;
+  }
+}

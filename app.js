@@ -101,11 +101,11 @@ window.addEventListener("scroll", () => {
   }
 });
 
-//animaciones para la primera seccion
+//animaciones para las apariciones de elementos en pantalla
 
-const items = document.querySelectorAll(".first > .father > .child");
-
-const observerOptions = { rootMargin: "2px" };
+const firstItems = document.querySelectorAll(".first > .father > .child");
+const secondItems = document.querySelectorAll(".second > .father > .child");
+const totals = [...firstItems, ...secondItems];
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -129,7 +129,7 @@ const observer = new IntersectionObserver((entries) => {
   });
 });
 
-items.forEach(item => observer.observe(item));
+totals.forEach(item => observer.observe(item));
 
 function getChildrenElements(parent) {
   return parent.querySelectorAll("h3, h2, p, li, h4");
