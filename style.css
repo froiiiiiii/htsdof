@@ -774,3 +774,12 @@ p li a {
     transform: scale(1);
   }
 }
+
+/* footer */
+
+.footer{
+    text-align: center;
+    padding: 1em;
+    color: var(--text-color);
+    font-size: 1.2em;
+}
