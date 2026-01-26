@@ -80,14 +80,14 @@ body {
   }
   to {
     width: 220px;
-    height: 420px;
+    height: 440px;
   }
 }
 
 @keyframes contraerSidebar {
   from {
     width: 220px;
-    height: 420px;
+    height: 440px;
   }
   to {
     width: 60px;
@@ -743,4 +743,34 @@ p li a {
   text-align: justify;
   font-size: 1.5em;
   margin-bottom: 2em;
+}
+
+/* sexta seccion */
+
+.sixth{
+  padding: 3em 2em;
+}
+.sixth > h2{
+  text-align: center;
+  font-size: 3em;
+}
+.sixth > .father > .child > p{
+  text-align: center;
+  font-size: 1.5em;
+}
+
+
+.sixth > .father > .child {
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.4s ease, transform 0.6s ease;
+}
+.sixth > .father > .child.visible {
+  animation: entrar_sixth 0.4s ease forwards;
+}
+@keyframes entrar_sixth {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }

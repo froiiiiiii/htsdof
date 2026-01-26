@@ -107,7 +107,8 @@ const firstItems = document.querySelectorAll(".first > .father > .child");
 const secondItems = document.querySelectorAll(".second > .father > .child");
 const thirdItems = document.querySelectorAll(".third > .father > .child");
 const roomItems = document.querySelectorAll(".room > .father > .child");
-const totals = [...firstItems, ...secondItems, ...thirdItems, ...roomItems];
+const sixthItems = document.querySelectorAll(".sixth > .father > .child");
+const totals = [...firstItems, ...secondItems, ...thirdItems, ...roomItems, ...sixthItems];
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
