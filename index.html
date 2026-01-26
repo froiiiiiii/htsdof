@@ -8,11 +8,11 @@
     <title>Realidad sin drogas</title>
   </head>
   <body>
-    <div class="box-sidebar">
-      <aside id="sidebar" class="sidebar expandido">
+    <div class="box-sidebar hidden" id="box-sidebar">
+      <aside id="sidebar" class="sidebar ">
         <div class="container-btn">
           <button
-            class="toggle-btn expandido"
+            class="toggle-btn contraido"
             id="toggle-btn-sidebar"
             onclick="toggleSidebar()"
           >
@@ -45,83 +45,90 @@
     </div>
     <div class="contenedor">
       <main class="contenido">
+        <div class="title-box">
+          <h1 id="section-tittle">
+            <span id="span-tittle">
+              Concientización sobre el consumo y los riesgos de las drogas en
+              jóvenes
 
-        <h1 id="section-tittle">
-          Concientización sobre el consumo y los riesgos de las drogas en
-          jóvenes
-        </h1>
+            </span>
+          </h1>
 
-        <section id="wrtd" class="seccion activa">
-          <h2>¿Qué son las drogas?</h2>
-          <p>
-            Las drogas son sustancias psicoactivas que alteran el funcionamiento
-            del sistema nervioso central, modificando el estado de ánimo, la
-            percepción o la conciencia, y pueden ser estimulantes, depresoras o
-            alucinógenas, afectando seriamente la salud física y mental. Se
-            clasifican en diversas categorías como estimulantes (cocaína),
-            depresores, ansiolíticos y alucinógenos (LSD, hongos), siendo muchas
-            de ellas de uso recreativo ilegal, aunque existen también fármacos
-            legales.
-          </p>
-          <p></p>
-          <h3>Definición y clasificacion de las drogas</h3>
-          <ul>
-            <li>Eufóricas: Opio y sus derivados, así como cocaína.</li>
-            <li>Fantásticas: Mezcalina, marihuana y beleño, entre otras.</li>
-            <li>Embriagantes: Alcohol, éter, cloroformo y bencina.</li>
-            <li>Hipnóticas: Barbitúricos y otros somníferos.</li>
-            <li>Excitantes: Cafeína y tabaco, entre otras.</li>
-          </ul>
-          <h3>Clasificacion de las drogas legales e ilegales</h3>
-          <ul>
-            <h4>Legales.</h4>
-            <li>Benzodiacepinas y otros sedantes-hipnóticos.</li>
-            <li>Alcohol.</li>
-            <li>Tabaco.</li>
-            <h4>Ilegales.</h4>
-            <li>Cannabis.</li>
-            <li>
-              Estimulantes (cocaína, metanfetamina, anfetamina,
-              metilfenidato...).
-            </li>
-            <li>Alucinógenos (Lsd).</li>
-            <li>Fenciclidina.</li>
-            <li>Opiáceos.</li>
-            <li>Inhalantes.</li>
-            <li>Ketamina.</li>
-          </ul>
-          <h3>Realidad del consumo. ¿Cómo afecta al cerebro y al cuerpo?</h3>
-          <p>
-            El abuso de drogas provoca efectos a corto y largo plazo en la
-            salud. Las drogas no solo afectan al cuerpo, también pueden afectar
-            a la salud mental de la persona, a sus relaciones laborales,
-            familiares, de pareja, a su vida social y, por supuesto, a su
-            economía.
-          </p>
-          <p>
-            El consumo prolongado y la cantidad de dosis también influyen en los
-            efectos físicos y psicológicos que causan las drogas. Más allá de
-            las consecuencias en uno mismo, también hay que considerar en caso
-            de padres drogadictos las consecuencias en sus hijos.
-          </p>
-          <p>
-            Los efectos negativos de las drogas en el sistema nervioso son
-            diversos. Sus principales víctimas son los neurotransmisores, las
-            sustancias que permiten que nuestro sistema cerebral funcione
-            correctamente como la endorfina, la serotonina y la dopamina.
-          </p>
-          <p>
-            El consumo de cocaína, por ejemplo, altera el córtex prefrontal, la
-            zona que controla el comportamiento y la capacidad de decisión,
-            hasta el punto de provocar convulsiones y sufrimientos comparables a
-            los de la esquizofrenia paranoide. El efecto de las drogas sobre el
-            sistema nervioso es muy insidioso, ya que ese breve placer inicial
-            cuesta lapsos de memoria en el cerebro comparables a los de los
-            ancianos, lo que conduce a la demencia temprana y al Alzheimer.
-          </p>
+        </div>
+
+        <section id="wrtd" class="seccion bg-primary first">
+          <div class="father">
+            <div class="child">
+              <h2 c>¿Qué son las drogas?</h2>
+              <p>
+                Las drogas son sustancias psicoactivas que alteran el funcionamiento
+                del sistema nervioso central, modificando el estado de ánimo, la
+                percepción o la conciencia, y pueden ser estimulantes, depresoras o
+                alucinógenas, afectando seriamente la salud física y mental. Se
+                clasifican en diversas categorías como estimulantes (cocaína),
+                depresores, ansiolíticos y alucinógenos (LSD, hongos), siendo muchas
+                de ellas de uso recreativo ilegal, aunque existen también fármacos
+                legales.
+              </p>
+            </div>
+            <div class="child">
+              <h3>Definición y clasificacion de las drogas</h3>
+              <ul>
+                <li>Eufóricas: Opio y sus derivados, así como cocaína.</li>
+                <li>Fantásticas: Mezcalina, marihuana y beleño, entre otras.</li>
+                <li>Embriagantes: Alcohol, éter, cloroformo y bencina.</li>
+                <li>Hipnóticas: Barbitúricos y otros somníferos.</li>
+                <li>Excitantes: Cafeína y tabaco, entre otras.</li>
+              </ul>
+
+            </div>
+            <div class="child">
+              <h3>Clasificacion de las drogas legales e ilegales</h3>
+              <ul>
+                <h4>Legales.</h4>
+                <li>Benzodiacepinas y otros sedantes-hipnóticos.</li>
+                <li>Alcohol.</li>
+                <li>Tabaco.</li>
+                <h4>Ilegales.</h4>
+                <li>Cannabis.</li>
+                <li>
+                  Estimulantes (cocaína, metanfetamina, anfetamina,
+                  metilfenidato...).
+                </li>
+                <li>Alucinógenos (Lsd).</li>
+                <li>Fenciclidina.</li>
+                <li>Opiáceos.</li>
+                <li>Inhalantes.</li>
+                <li>Ketamina.</li>
+              </ul>
+
+            </div>
+            <div class="child">
+              <h3>Realidad del consumo. ¿Cómo afecta al cerebro y al cuerpo?</h3>
+              <p>
+                El abuso de drogas provoca efectos a corto y largo plazo en la
+                salud. Las drogas no solo afectan al cuerpo, también pueden afectar
+                a la salud mental de la persona, a sus relaciones laborales,
+                familiares, de pareja, a su vida social y, por supuesto, a su
+                economía.
+              </p>
+              <p>
+                El consumo prolongado y la cantidad de dosis también influyen en los
+                efectos físicos y psicológicos que causan las drogas. Más allá de
+                las consecuencias en uno mismo, también hay que considerar en caso
+                de padres drogadictos las consecuencias en sus hijos.
+              </p>
+              <p>
+                Los efectos negativos de las drogas en el sistema nervioso son
+                diversos. Sus principales víctimas son los neurotransmisores, las
+                sustancias que permiten que nuestro sistema cerebral funcione
+                correctamente como la endorfina, la serotonina y la dopamina.
+              </p>
+            </div>
+          </div>
         </section>
 
-        <section id="consecuencia" class="seccion">
+        <section id="consecuencia" class="seccion bg-secondary">
           <h2>Consecuencia del consumo en adolescentes</h2>
           <h3>Consecuencia física, psicológica y sociales</h3>
           <ul>
@@ -175,7 +182,7 @@
           </div>
         </section>
 
-        <section id="manejo" class="seccion">
+        <section id="manejo" class="seccion bg-primary">
           <h2>Manejo emocional.</h2>
           <h3>
             Presión social 
@@ -215,7 +222,7 @@
         
         </section>
 
-        <section id="prevencion" class="seccion">
+        <section id="prevencion" class="seccion bg-secondary">
           <h2>Prevención y toma de decisiones</h2>
           <p>La prevención consiste en desarrollar habilidades que permitan tomar decisiones responsables, informadas y seguras frente al consumo de drogas. Tomar buenas decisiones ayuda a proteger la salud física, mental y social.</p>
           <h3>Estrategias para decir no</h3>
@@ -224,7 +231,7 @@
 
         </section>
 
-        <section id="apoyo" class="seccion">
+        <section id="apoyo" class="seccion bg-primary">
           <h2>Apoyo a los jóvenes</h2>
           <p>Algunas opciones reales de apoyo para jóvenes con problemas de drogas o que necesitan ayuda emocional, incluyendo líneas de contacto, fundaciones y opciones de especialistas pueden ser:</p>
           <ul id="contactos-apoyo">
@@ -237,7 +244,7 @@
           </ul>
         </section>
 
-        <section id="metodologia" class="seccion">
+        <section id="metodologia" class="seccion bg-secondary">
           <h2>Metodología</h2>
           <p>Aqui un video educativos:</p>
           <iframe class="iframe" title="vimeo-player" src="https://player.vimeo.com/video/129631483?h=a04764459f"  height="360" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>

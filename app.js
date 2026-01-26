@@ -1,12 +1,5 @@
 const btn = document.getElementById("toggle-btn-sidebar");
 
-function mostrarSeccion(id) {
-  document.querySelectorAll(".seccion").forEach((seccion) => {
-    seccion.classList.remove("activa");
-  });
-  document.getElementById(id).classList.add("activa");
-}
-
 function hideSidebar(){
     
     btn.classList.remove("expandido");
@@ -93,3 +86,51 @@ if (actual > 1){
     track.style.transform = `translateX(-${index * cardWidth}px)`;
   }
 });
+
+// mostrar navbar por primera vez
+const navbar = document.getElementById("box-sidebar");
+let yaAparecio = false;
+
+window.addEventListener("scroll", () => {
+  if (yaAparecio) return;
+
+  if (window.scrollY > 0) {
+    navbar.classList.remove("hidden");
+    navbar.classList.add("show");
+    yaAparecio = true;
+  }
+});
+
+//animaciones para la primera seccion
+
+const items = document.querySelectorAll(".first > .father > .child");
+
+const observerOptions = { rootMargin: "2px" };
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      console.log(entry);
+      
+      entry.target.classList.add("visible");
+      const children = getChildrenElements(entry.target);
+      children.forEach((child, index) => {
+        setTimeout(() => {
+          child.classList.add("visible");
+        }, index * 150);
+      });
+    } else {
+      entry.target.classList.remove("visible");
+      const children = getChildrenElements(entry.target);
+      children.forEach((child) => {
+        child.classList.remove("visible");
+      });
+    }
+  });
+});
+
+items.forEach(item => observer.observe(item));
+
+function getChildrenElements(parent) {
+  return parent.querySelectorAll("h3, h2, p, li, h4");
+}
