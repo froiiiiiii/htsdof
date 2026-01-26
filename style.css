@@ -2,6 +2,7 @@
   --bg-primary-color: #f3c363;
   --bg-secondary-color:#f1e9bb;
   --text-color:#5c483a;
+  --aux-color:#cf6123;
 }
 
 p, h1, h2, h3, h4, li{
@@ -19,7 +20,7 @@ html, body {
 
 body {
   margin: 0;
-  font-family: 'Times New Roman' 'Open Sans' sans-serif;
+  font-family: "Inter", sans-serif;
   background-color: #f3c363;
 }
 
@@ -207,12 +208,6 @@ h1{
   align-items: center;
 }
 
-.imagen {
-  width: 300px;
-  display: block;
-  margin: 0 auto;
-  border-radius: 1em;
-}
 
 
 .contenido{
@@ -220,19 +215,18 @@ h1{
         background-color: #f1e9bb;
 }
 
-#contactos-apoyo li a{
+.contactos-apoyo li a{
     text-decoration: none;
  color: #cf6123;
+}
+.contactos-apoyo li{
+  list-style: none;
 }
 
 #contactos-apoyo li a:hover{
     color: #833e16;
 }
 
-@media (max-width: 430px) {
-.imagen{
-    width: 220px;
-}}
 
 @media (max-width: 500px) {
 .card{
@@ -248,15 +242,7 @@ h1{
 }
 
 
-@media (max-width: 380px) {
-.imagen{
-    width: 180px;
-}}
-
 @media (max-width: 320px) {
-.imagen{
-    width: 220px;
-}
   .box-sidebar {
     display: none;
   }
@@ -503,6 +489,7 @@ p li a {
   
   transition: opacity 2s ease, transform 0.6s ease;
   opacity: 0;
+  
 }
 
 .third > .father > .child:nth-child(1) > .container{
@@ -589,5 +576,154 @@ p li a {
 .third > .father > .child:nth-child(3){
   border-top: 1px solid var(--text-color);
   grid-column: 1/2;
+}
+}
+
+
+/* cuarta seccion */
+.room{
+  padding: 3em 0;
+}
+
+
+.room > h2{
+  text-align: center;
+  font-size: 3em;
+}
+
+.room > .father > .child:nth-child(1){
+  width: 70%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+  font-size: 1.5em;
+  border-radius: 1em;
+  margin: 0 auto;
+  background-color: var(--bg-primary-color);
+  opacity: 0;
+  transform: scale(0);
+  box-shadow: 9px 10px 6px 2px rgba(0, 0, 0, 0.12);
+
+}
+
+.room > .father > .child:nth-child(1).visible{
+  animation: entrar_room 0.8s ease forwards;
+}
+
+@keyframes entrar_room {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.room > .father > .child:nth-child(2){
+  margin: 4em auto;
+  width: 80%;
+  height: 700px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
+
+.room > .father > .child:nth-child(2) > img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  grid-column: 1/5;
+  border-radius: 1em;
+  animation-delay: 0.5s;
+  box-shadow: 9px 10px 6px 2px rgba(0, 0, 0, 0.12);
+  
+  grid-row: 1/5;
+}
+.room > .father > .child:nth-child(2) > .bg{
+  background-color: var(--bg-primary-color);
+  grid-column: 2/6;
+  grid-row: 2/7;
+  animation-delay: 0.2s;
+  box-shadow: 9px 10px 6px 2px rgba(0, 0, 0, 0.12);
+
+  border-radius: 1em;
+}
+.room > .father > .child:nth-child(2) > .text{
+  color: var(--bg-secondary-color);
+  grid-column: 4/9;
+  animation-delay: 0.8s;
+  grid-row: 3/6;
+  box-shadow: 9px 10px 6px 2px rgba(0, 0, 0, 0.12);
+  grid-column: 4/9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-direction: column;
+  grid-row: 3/6;
+  border-radius: 1em;
+  background-color: var(--aux-color);
+}
+.room > .father > .child:nth-child(2) > .text > h3,
+.room > .father > .child:nth-child(2) > .text > p{
+  color: var(--bg-secondary-color);
+  text-align: center;
+} 
+
+.room > .father > .child:nth-child(2) > .text > h3{
+  font-size: 3em;
+}
+
+.room > .father > .child:nth-child(2) > .text > p{
+  font-size: 1.5em;
+  padding: 0 1em;
+}
+
+.room > .father > .child:nth-child(2) > img,
+.room > .father > .child:nth-child(2) > .bg,
+.room > .father > .child:nth-child(2) > .text{
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.4s ease, transform 0.6s ease;
+}
+
+.room > .father > .child.visible:nth-child(2) > img,
+.room > .father > .child.visible:nth-child(2) > .bg,
+.room > .father > .child.visible:nth-child(2) > .text{
+  animation: entrar_room_elements 0.8s ease forwards;
+}
+
+@keyframes entrar_room_elements {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .room > .father > .child:nth-child(1){
+    height: auto;
+    font-size: 1.2em;
+  }
+  .room > .father > .child:nth-child(2) > .text > h3{
+    font-size: 1.3em;
+  }
+
+  .room > .father > .child:nth-child(2) > .text > p{
+    font-size: 1em;
+    padding: 0 1em;
+  }
+.room > .father > .child:nth-child(2) > .text{
+    grid-column: 4/9;
+  
+  grid-row: 3/6;
+}
+.room > .father > .child:nth-child(2) > img{
+    grid-column: 1/5;
+    grid-row: 2/4;
+
+}
+.room > .father > .child:nth-child(2) > .bg{
+    grid-column: 2/6;
+    grid-row: 1/5;
 }
 }
