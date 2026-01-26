@@ -105,7 +105,8 @@ window.addEventListener("scroll", () => {
 
 const firstItems = document.querySelectorAll(".first > .father > .child");
 const secondItems = document.querySelectorAll(".second > .father > .child");
-const totals = [...firstItems, ...secondItems];
+const thirdItems = document.querySelectorAll(".third > .father > .child");
+const totals = [...firstItems, ...secondItems, ...thirdItems];
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {

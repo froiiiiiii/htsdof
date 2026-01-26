@@ -409,6 +409,9 @@ p li a {
 .second{
   padding: 20px;
 }
+.second > h2{
+  font-size: 3em;
+}
 
 .second > .father{
   padding: 20px;
@@ -443,6 +446,7 @@ p li a {
 .second > .father > .child.visible{
   animation: entrar_second 0.8s ease forwards;
 }
+
 .second > .father >.child:nth-child(1){
   animation-delay: 0.2s;
 }
@@ -464,4 +468,126 @@ p li a {
   .second .father {
     grid-template-columns: 1fr;
   }
+}
+
+
+/* tercera seccion */
+
+.third > h2{
+  text-align: center;
+  font-size: 3em;
+}
+
+.third > .father{
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:2em;
+}
+
+.third > .father > .child{
+  overflow: hidden;
+  padding: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+}
+.third > .father > .child > .container> h3{
+  font-size: 2em;
+
+}
+
+.third > .father > .child > .container{
+  
+  transition: opacity 2s ease, transform 0.6s ease;
+  opacity: 0;
+}
+
+.third > .father > .child:nth-child(1) > .container{
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.third > .father > .child:nth-child(2) > .container{
+  transform: translateX(100%);
+  opacity: 0;
+}
+.third > .father > .child:nth-child(3) > .container{
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.third > .father > .child:nth-child(3) .visible > .container{
+  opacity: 1;
+  animation: entrar_thirdY 0.8s ease forwards;
+}
+.third > .father > .child.visible > .container{
+  opacity: 1;
+  animation: entrar_third 0.8s ease forwards;
+}
+
+@keyframes entrar_third {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  
+}
+@keyframes entrar_thirdY {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  
+}
+
+.third > .father > .child > .container > p,
+.third > .father > .child > .container > ul > li,
+.third > .father > .child > .container > ul > h4{
+  font-size: 1.2em;
+}
+
+.third > .father > .child:nth-child(1) > p{
+  text-align: justify;
+  font-size: 1.5em;
+}
+
+.third > .father > .child:nth-child(1){
+  border-right: 1px solid var(--text-color);
+  grid-column: 1/3;
+}
+.third > .father > .child:nth-child(2){
+  grid-column: 3/5;
+}
+.third > .father > .child:nth-child(3){
+  border-top: 1px solid var(--text-color);
+  grid-column: 2/4;
+}
+
+
+@media (max-width: 768px) {
+  .third .father {
+    grid-template-columns: 1fr;
+  }
+
+  .third > .father > .child > .container > h3,
+.third > .father > .child:nth-child(1) > .container > p{
+  font-size: 1em;
+}
+
+  .third > .father > .child:nth-child(1){
+    
+  border-right: none;
+  grid-column: 1/2;
+}
+.third > .father > .child:nth-child(2){
+  border-top: 1px solid var(--text-color);
+  grid-column: 1/2;
+}
+.third > .father > .child:nth-child(3){
+  border-top: 1px solid var(--text-color);
+  grid-column: 1/2;
+}
 }
