@@ -34,7 +34,6 @@ function cargarContenido(nf=false) {
         return response.text();
     })
     .then(data => {
-        console.log(data);
         
         loader.classList.remove("visible");
         contenedor.innerHTML = data;
