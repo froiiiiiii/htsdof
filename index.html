@@ -1,357 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="./index.js"></script>
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <title>Realidad sin drogas</title>
-  </head>
-  <body>
-    <div class="box-sidebar hidden" id="box-sidebar">
-      <aside id="sidebar" class="sidebar ">
-        <div class="container-btn">
-          <button
-            class="toggle-btn contraido"
-            id="toggle-btn-sidebar"
-            onclick="toggleSidebar()"
-          >
-            ☰
-          </button>
-        </div>
-        <nav>
-          <ul>
-            <li onclick="hideSidebar()" data-target="wrtd">
-              ¿Qué son las drogas?.
-            </li>
-            <li onclick="hideSidebar()" data-target="consecuencia">
-              Consecuencia del consumo en adolescentes.
-            </li>
-            <li onclick="hideSidebar()" data-target="manejo">
-              Manejo emocional.
-            </li>
-            <li onclick="hideSidebar()" data-target="prevencion">
-              Prevención y toma de decisiones.
-            </li>
-            <li onclick="hideSidebar()" data-target="apoyo">
-              Apoyo a los jóvenes.
-            </li>
-            <li onclick="hideSidebar()" data-target="metodologia">
-              Metodología.
-            </li>
-          </ul>
-        </nav>
-      </aside>
-    </div>
-    <div class="contenedor">
-      <main class="contenido">
-        <div class="title-box bg-secondary" >
-          <div class="father">
-            <div class="child">
-              <img class="img-tittle" src="img/drogas.jpg" alt="alto a las drogas">
-            </div>
-            <div class="child">
-              <h1 id="section-tittle">
-                <span id="span-tittle">
-                  Concientización sobre el consumo y los riesgos de las drogas en
-                  jóvenes
+</head>
+<body>
     
-                </span>
-              </h1>
+    <header>
+        <nav class="navegation-bar-container">
+            <button class="navegation-bar-button active" id="navegation-bar-button">☰</button>
+            <ul class="navegation-bar-list" id="navegation-bar-list">
+                <li class="navegation-bar-item" data-navegation="wrtd" id="wrtd">¿Qué son las drogas?</li>
+                <li class="navegation-bar-item" data-navegation="consecuencia" id="consecuencia">Consecuencias</li>
+                <li class="navegation-bar-item" data-navegation="manejo" id="manejo">Manejo</li>
+                <li class="navegation-bar-item" data-navegation="prevencion" id="prevencion">Prevencion</li>
+                <li class="navegation-bar-item" data-navegation="apoyo" id="apoyo">Apoyo</li>
+                <li class="navegation-bar-item" data-navegation="metodologia" id="metodologia">Metodologia</li>
+            </ul>
+        </nav>
+    </header>
+    <div id="loader" class="loader">
+        <svg
+  width="60"
+  height="60"
+  viewBox="0 0 100 100"
+  xmlns="http://www.w3.org/2000/svg"
+  class="loader-svg"
+>
+  <circle
+    cx="50"
+    cy="50"
+    r="40"
+    fill="none"
+    stroke="#3498db"
+    stroke-width="8"
+    stroke-linecap="round"
+    stroke-dasharray="188"
+    stroke-dashoffset="130"
+  >
+    <animateTransform
+      attributeName="transform"
+      type="rotate"
+      from="0 50 50"
+      to="360 50 50"
+      dur="1s"
+      repeatCount="indefinite"
+    />
+  </circle>
+</svg>
 
-            </div>
-          </div>
-
-        </div>
-
-        <section id="wrtd" class="seccion bg-primary first">
-          <div class="father">
-            <div class="child">
-              <h2 c>¿Qué son las drogas?</h2>
-              <p>
-                Las drogas son sustancias psicoactivas que alteran el funcionamiento
-                del sistema nervioso central, modificando el estado de ánimo, la
-                percepción o la conciencia, y pueden ser estimulantes, depresoras o
-                alucinógenas, afectando seriamente la salud física y mental. Se
-                clasifican en diversas categorías como estimulantes (cocaína),
-                depresores, ansiolíticos y alucinógenos (LSD, hongos), siendo muchas
-                de ellas de uso recreativo ilegal, aunque existen también fármacos
-                legales.
-              </p>
-            </div>
-            <div class="child">
-              <h3>Definición y clasificacion de las drogas</h3>
-              <ul>
-                <li>Eufóricas: Opio y sus derivados, así como cocaína.</li>
-                <li>Fantásticas: Mezcalina, marihuana y beleño, entre otras.</li>
-                <li>Embriagantes: Alcohol, éter, cloroformo y bencina.</li>
-                <li>Hipnóticas: Barbitúricos y otros somníferos.</li>
-                <li>Excitantes: Cafeína y tabaco, entre otras.</li>
-              </ul>
-
-            </div>
-            <div class="child">
-              <h3>Clasificacion de las drogas legales e ilegales</h3>
-              <ul>
-                <h4>Legales.</h4>
-                <li>Benzodiacepinas y otros sedantes-hipnóticos.</li>
-                <li>Alcohol.</li>
-                <li>Tabaco.</li>
-                <h4>Ilegales.</h4>
-                <li>Cannabis.</li>
-                <li>
-                  Estimulantes (cocaína, metanfetamina, anfetamina,
-                  metilfenidato...).
-                </li>
-                <li>Alucinógenos (Lsd).</li>
-                <li>Fenciclidina.</li>
-                <li>Opiáceos.</li>
-                <li>Inhalantes.</li>
-                <li>Ketamina.</li>
-              </ul>
-
-            </div>
-            <div class="child">
-              <h3>Realidad del consumo. ¿Cómo afecta al cerebro y al cuerpo?</h3>
-              <p>
-                El abuso de drogas provoca efectos a corto y largo plazo en la
-                salud. Las drogas no solo afectan al cuerpo, también pueden afectar
-                a la salud mental de la persona, a sus relaciones laborales,
-                familiares, de pareja, a su vida social y, por supuesto, a su
-                economía.
-              </p>
-              <p>
-                El consumo prolongado y la cantidad de dosis también influyen en los
-                efectos físicos y psicológicos que causan las drogas. Más allá de
-                las consecuencias en uno mismo, también hay que considerar en caso
-                de padres drogadictos las consecuencias en sus hijos.
-              </p>
-              <p>
-                Los efectos negativos de las drogas en el sistema nervioso son
-                diversos. Sus principales víctimas son los neurotransmisores, las
-                sustancias que permiten que nuestro sistema cerebral funcione
-                correctamente como la endorfina, la serotonina y la dopamina.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section id="consecuencia" class="seccion bg-secondary second">
-          <h2>Consecuencia del consumo en adolescentes</h2>
-          <div class="father">
-            <div class="child">
-              <h4>Consecuencia física</h4>
-              <ul>
-                <li>Daños al sistema nervioso (pérdida de memoria, coordinación y reflejos).</li>
-                <li>Problemas cardíacos y respiratorios (arritmias, infartos, dificultad para respirar).</li>
-                <li>Daño al hígado y riñones (cirrosis, insuficiencia renal).</li>
-                <li>Trastornos del sueño y del apetito.</li>
-              </ul>
-              
-            </div>
-            <div class="child">
-              <h4>Consecuencia psicologica</h4>
-              <ul>
-                <li>Adicción y pérdida de control sobre el consumo.</li>
-                <li>Cambios bruscos de humor e irritabilidad.</li>
-                <li>Alucinaciones, paranoia y psicosis (en drogas más fuertes).</li>
-                <li>Aislamiento emocional y pérdida de motivación.</li>
-              </ul>
-            </div>
-            <div class="child">
-              <h4>Consecuencia social</h4>
-              <ul>
-                <li>Problemas familiares y ruptura de relaciones.</li>
-                <li>Estigmatización y rechazo social.</li>
-                <li>Dificultades económicas.</li>
-                <li>Bajo rendimiento académico o abandono escolar.</li>
-              </ul>
-            </div>
-          </div>
-          <h3>Testimonios y casos reales.</h3>
-          <div class="box-carousel">
-            <div class="carousel">
-              <button class="btn prev end">&#10094;</button>
-  
-              <div class="carousel-viewport">
-                <div class="carousel-track">
-                  <div class="card">
-                    <h3>John Paul Herrera</h3>
-                    <p>
-                      John Herrera empezó a experimentar con mariguana cuando tenía solo 11 años. Después, a los 16, este nativo de Nuevo México probó la heroína por primera vez. 
-                    </p>
-                  </div>
-                  <div class="card">
-                    <h3>Abbey Zorzi</h3>
-                    <p>Yo me imaginaba a los adictos como alguien bajo un puente, con una aguja clavada en el brazo. Así pueden verse las últimas fases de la adicción, pero ciertamente no empieza así. Nunca me imaginé a mí mismo como adicto hasta que lo fui en mi adolescencia.</p>
-                  </div>
-                  <div class="card">
-                    <h3>Hailey Hesch</h3>
-                    <p>A los 19 años, Hailey se está recuperando en un centro de tratamiento en Nuevo México después de años de consumir heroína. </p>
-                  </div>
-                  <div class="card">
-                    <h3>Chelsea Heptig</h3>
-                    <p>El éxtasis hizo que Chelsea perdiera el conocimiento y sufriera terribles convulsiones. </p>
-                  </div>
-                </div>
-              </div>
-  
-              <button class="btn next">&#10095;</button>
-            </div>
-
-          </div>
-        </section>
-
-        <section id="manejo" class="seccion bg-primary third">
-          <h2>Manejo emocional.</h2>
-          <div class="father">
-            <div class="child">
-              <div class="container">
-                <h3>
-                  Presión social 
-                </h3>
-                <p>La presión social es la influencia que ejercen otras personas o el entorno para que alguien actúe de cierta manera. En el caso de las drogas, esta presión puede llevar a una persona a probar o consumir sustancias aunque no lo desee.</p>
-
-              </div>
-
-            </div>
-            <div class="child">
-              <div class="container">
-                <h3>
-                  Autoestima social 
-                </h3>
-                <p>La autoestima social y grupal se refiere a cómo una persona se valora a sí misma dentro de un grupo y cómo se siente aceptada por los demás.</p>
-                <ul>
-                  <h4>Relación con las drogas:</h4>
-                  <li>Las personas con baja autoestima pueden consumir drogas para sentirse aceptadas o valoradas.</li>
-                  <li>El miedo al rechazo del grupo puede llevar a consumir sustancias aunque no se quiera.</li>
-                  <li>En algunos grupos, el consumo de drogas se ve como una forma de pertenecer o “encajar”.</li>
-                  <h4>Consecuencias:</h4>
-                  <li>Dependencia emocional del grupo.</li>
-                  <li>Pérdida de identidad personal.</li>
-                  <li>Mayor vulnerabilidad a la presión social.</li>
-                </ul>
-
-              </div>
-
-            </div>
-            <div class="child">
-              <div class="container">
-                <h3>
-                  Redes sociales
-                </h3>
-                <p>Las redes sociales influyen fuertemente en las decisiones y comportamientos, especialmente en jóvenes.</p>
-              
-                <ul>
-                  <h4>Relación con las drogas:</h4>
-                  <li>Publicaciones que normalizan o idealizan el consumo de drogas.</li>
-                  <li>Influencers o figuras públicas que muestran el consumo como algo “cool”.</li>
-                  <li>Retos virales o contenido que minimiza los riesgos.</li>
-                  <h4>Consecuencias:</h4>
-                  <li>Percepción errónea de que “todos consumen”.</li>
-                  <li>Curiosidad y presión indirecta para imitar conductas.</li>
-                  <li>Aumento del consumo por imitación.</li>
-                </ul>
-
-              </div>
-
-            </div>
-          </div>
-        
-
-        
-        </section>
-
-        <section id="prevencion" class="seccion bg-secondary room">
-          <h2>Prevención y toma de decisiones</h2>
-          <div class="father">
-            <div class="child">
-              <p>La prevención consiste en desarrollar habilidades que permitan tomar decisiones responsables, informadas y seguras frente al consumo de drogas. Tomar buenas decisiones ayuda a proteger la salud física, mental y social.</p>
-            </div>
-            <div class="child">
-              <div class="bg">
-              </div>
-              <img class="imagen"src="img/sin-drogas-personas-con-un-gesto-rechazan-el-vector-de-medicación-prohibido-la-prohibida-comerciante-sostiene-paquete-pastillas-222045214.webp" alt="Foto de ejemplo">
-              <div class="text">
-                <h3>Aprende a decir que no.</h3>
-                <p>Se debe ser asertivo, proponer alternativas, repetir la postura o retirarse si es necesario.</p>
-              </div>
-            </div>
-            
-          </div>
-
-        </section>
-
-        <section id="apoyo" class="seccion bg-primary fifth">
-          <h2>Apoyo a los jóvenes</h2>
-          <div class="father">
-            <div class="child">
-
-              <p>Algunas opciones reales de apoyo para jóvenes con problemas de drogas o que necesitan ayuda emocional, incluyendo líneas de contacto, fundaciones y opciones de especialistas pueden ser:</p>
-            </div>
-            <div class="child">
-
-              <ul class="contactos-apoyo">
-                <h3>Centros de Ayuda</h3>
-                <li><a target="_blank" href="https://naecuador.org/">Narcoticos Anonimos 
-                <svg class="icon-external" viewBox="0 0 24 24" aria-hidden="true">
-    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"/>
-    <path d="M5 5h6V3H5c-1.1 0-2 .9-2 2v14c0 
-    1.1.9 2 2 2h14c1.1 0 2-.9 
-    2-2v-6h-2v6H5V5z"/>
-  </svg></a></li>
-                <li><a target="_blank" href="https://www.naranonecuador.org/">NAR-ANON Ecuador <svg class="icon-external" viewBox="0 0 24 24" aria-hidden="true">
-    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"/>
-    <path d="M5 5h6V3H5c-1.1 0-2 .9-2 2v14c0 
-    1.1.9 2 2 2h14c1.1 0 2-.9 
-    2-2v-6h-2v6H5V5z"/>
-  </svg></a></li>
-                <li><a target="_blank" href="https://sanjuandedios.ec/adicciones/">Hospital Especializado San Juan de Dios (Quito) <svg class="icon-external" viewBox="0 0 24 24" aria-hidden="true">
-    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"/>
-    <path d="M5 5h6V3H5c-1.1 0-2 .9-2 2v14c0 
-    1.1.9 2 2 2h14c1.1 0 2-.9 
-    2-2v-6h-2v6H5V5z"/>
-  </svg></a></li>
-              </ul>
-            </div>
-            <div class="child">
-              <ul class="contactos-apoyo">
-                <h3>Centros de Rehabilitación</h3>
-                <li><a target="_blank" href="https://centrorehabilitacionquito.com/">Centro de Rehabilitación de Adicciones en Quito <svg class="icon-external" viewBox="0 0 24 24" aria-hidden="true">
-    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"/>
-    <path d="M5 5h6V3H5c-1.1 0-2 .9-2 2v14c0 
-    1.1.9 2 2 2h14c1.1 0 2-.9 
-    2-2v-6h-2v6H5V5z"/>
-  </svg></a></li>
-                <li><a target="_blank" href="https://casahesed.com/">Casa hesed <svg class="icon-external" viewBox="0 0 24 24" aria-hidden="true">
-    <path d="M14 3h7v7h-2V6.41l-9.29 9.3-1.42-1.42 9.3-9.29H14V3z"/>
-    <path d="M5 5h6V3H5c-1.1 0-2 .9-2 2v14c0 
-    1.1.9 2 2 2h14c1.1 0 2-.9 
-    2-2v-6h-2v6H5V5z"/>
-  </svg></a></li>
-              </ul>
-
-            </div>
-          </div>
-        </section>
-
-        <section id="metodologia" class="seccion bg-secondary sixth">
-          <h2>Metodología</h2>
-          <div class="father">
-            <div class="child">
-
-              <p>Aqui un video educativos:</p>
-              <iframe class="iframe" title="vimeo-player" src="https://player.vimeo.com/video/129631483?h=a04764459f"  height="360" frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"   allowfullscreen></iframe>
-            </div>
-          </div>
-        </section>
-        <footer class="bg-primary footer">
-          ® 2026 Realidad sin drogas - Todos los derechos reservados.
-        </footer>
-      </main>
     </div>
+    <main id="main-content">
 
-    <script src="app.js"></script>
-  </body>
+    </main>
+    <footer class="bg-primary footer">
+          ® 2026 Realidad sin drogas - Todos los derechos reservados.
+
+    </footer>
+
+    <script src="control.js"></script>
+</body>
 </html>
