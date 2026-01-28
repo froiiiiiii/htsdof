@@ -11,7 +11,8 @@
     
     <header>
         <nav class="navegation-bar-container">
-            <ul class="navegation-bar-list">
+            <button class="navegation-bar-button active" id="navegation-bar-button">☰</button>
+            <ul class="navegation-bar-list" id="navegation-bar-list">
                 <li class="navegation-bar-item" data-navegation="wrtd" id="wrtd">¿Qué son las drogas?</li>
                 <li class="navegation-bar-item" data-navegation="consecuencia" id="consecuencia">Consecuencias</li>
                 <li class="navegation-bar-item" data-navegation="manejo" id="manejo">Manejo</li>
@@ -21,6 +22,37 @@
             </ul>
         </nav>
     </header>
+    <div id="loader" class="loader">
+        <svg
+  width="60"
+  height="60"
+  viewBox="0 0 100 100"
+  xmlns="http://www.w3.org/2000/svg"
+  class="loader-svg"
+>
+  <circle
+    cx="50"
+    cy="50"
+    r="40"
+    fill="none"
+    stroke="#3498db"
+    stroke-width="8"
+    stroke-linecap="round"
+    stroke-dasharray="188"
+    stroke-dashoffset="130"
+  >
+    <animateTransform
+      attributeName="transform"
+      type="rotate"
+      from="0 50 50"
+      to="360 50 50"
+      dur="1s"
+      repeatCount="indefinite"
+    />
+  </circle>
+</svg>
+
+    </div>
     <main id="main-content">
 
     </main>
@@ -29,7 +61,6 @@
 
     </footer>
 
-    <script src="app.js"></script>
     <script src="control.js"></script>
 </body>
 </html>
