@@ -71,7 +71,7 @@ function activeNavItem(item, update=true) {
 }
 
 function changeUrl(name){
-    const nuevaRuta =  `home.html#${name}`;
+    const nuevaRuta =  `index.html#${name}`;
     
     history.replaceState({}, "", nuevaRuta);
 }
