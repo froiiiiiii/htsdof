@@ -72,6 +72,7 @@ function activeNavItem(item, update=true) {
 
 function changeUrl(name){
     const nuevaRuta =  `index.html#${name}`;
+    console.log("cambiando a index");
     
     history.replaceState({}, "", nuevaRuta);
 }
