@@ -506,6 +506,9 @@ p li a {
 }
 
 .second > .father > .child{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   transform: scale(0.1 );
   border-radius: 0.7em;
   opacity: 0;
@@ -514,11 +517,19 @@ p li a {
   transition: opacity 0.4s ease, transform 0.6s ease;
   background-color: var(--bg-primary-color);
 }
-.second > .father > .child > h3,
-.second > .father > .child > h2{
+.second > .father > .child > .img{
+  width: 70%;
+  margin: 0 auto;
+}
+.second > .father > .child > .img > img{
+  width: 100%;
+}
+
+.second > .father > .child > .content > h3,
+.second > .father > .child > .content  > h2{
   text-align: center;
 }
-.second > .father > .child > p{
+.second > .father > .child > .content  > p{
   text-align: justify;
 }
 
