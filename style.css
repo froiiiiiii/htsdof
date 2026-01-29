@@ -252,8 +252,19 @@ h1{
 }
 }
 
+.videos{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .iframe{
+  padding-top: 2em;
     width: 100%;
+    min-width: 300px;
+    max-width: 800px !important;
+    max-height: 400px !important;
 }
 
 
@@ -928,6 +939,7 @@ p li a {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 5em;
 }
 
 /* estilos para la barra de navegacion */
@@ -938,6 +950,7 @@ p li a {
 
 .navegation-bar-container{
   background-color: var(--bg-primary-color);
+  box-shadow: 0px 7px 5px 2px rgba(0, 0, 0, 0.3);
 }
 
 .navegation-bar-container .navegation-bar-list{
@@ -955,7 +968,7 @@ p li a {
 }
 
 .navegation-bar-container .navegation-bar-list .navegation-bar-item{
-  padding: 1em;
+  padding: 2em;
   user-select: none;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -1008,4 +1021,39 @@ p li a {
     background-color: rgba(92, 72, 58,0.3);
   }
 
+}
+
+/* estilos para el boton top */
+
+#btnTop {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  font-size: 2em;
+  width: 2em;
+  height: 2em;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--bg-primary-color);
+  color: var(--text-color);
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: all 0.3s, transform 0.3s;
+}
+
+#btnTop.deactivate{
+  transform: scale(0);
+}
+
+#btnTop:hover {
+  transform: scale(1.1);
+}
+
+
+/* estilos del header */
+
+#header-content{
+  position: fixed;
+  width: 100vw;
+  z-index: 10;
 }

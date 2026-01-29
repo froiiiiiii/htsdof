@@ -1,3 +1,4 @@
+const btn = document.getElementById("btnTop");
 const navItems = document.querySelectorAll(".navegation-bar-list > .navegation-bar-item");
 const contenedor = document.getElementById("main-content");
 const loader = document.getElementById("loader");
@@ -147,3 +148,30 @@ if (actual > 1){
 });
 
 }
+
+// manejo del boton para volver a arriba del todo
+
+  window.addEventListener("scroll", showBtnTop)
+
+  btn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+
+  function showBtnTop(){
+    if (window.scrollY > 200) {
+        if (btn.classList.contains("deactivate")){
+            btn.classList.remove("deactivate");
+        }
+        
+    } else {
+        if(!btn.classList.contains("deactivate")){
+            btn.classList.add("deactivate");
+        }
+        
+    }
+  }
+
+  showBtnTop()
