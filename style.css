@@ -887,6 +887,22 @@ p li a {
   margin-bottom: 2em;
 }
 
+.fifth > .father > .child:nth-child(2){
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  
+  flex-direction: row;
+}
+
+@media (max-width: 768px) {
+  .fifth > .father > .child:nth-child(2){
+
+  
+  flex-direction: column;
+}
+}
+
 /* sexta seccion */
 
 .sixth{
